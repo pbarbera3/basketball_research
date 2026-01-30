@@ -435,7 +435,12 @@ export default function LabelPage() {
 
           <div className="grid grid-cols-2 gap-3">
             <button
-              className="rounded-2xl bg-white text-black py-4 text-lg font-semibold disabled:opacity-50"
+              className="
+                rounded-2xl bg-white text-black py-4 text-lg font-semibold
+                transition-transform duration-75 active:scale-[0.98] active:brightness-95
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40
+                disabled:opacity-50
+              "
               disabled={saving || !clip}
               onClick={() => saveLabel("good")}
             >
@@ -443,7 +448,12 @@ export default function LabelPage() {
             </button>
 
             <button
-              className="rounded-2xl border border-white/25 py-4 text-lg font-semibold disabled:opacity-50"
+              className="
+                rounded-2xl border border-white/25 py-4 text-lg font-semibold
+                transition-transform duration-75 active:scale-[0.98] active:bg-white/5
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30
+                disabled:opacity-50
+              "
               disabled={saving || !clip}
               onClick={() => saveLabel("bad")}
             >
