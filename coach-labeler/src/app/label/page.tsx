@@ -436,29 +436,36 @@ export default function LabelPage() {
           <div className="grid grid-cols-2 gap-3">
             <button
               className="
-                rounded-2xl bg-white text-black py-4 text-lg font-semibold
-                transition-transform duration-75 active:scale-[0.98] active:brightness-95
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40
+                rounded-2xl border-2 border-emerald-400 text-emerald-300
+                bg-black py-4 text-lg font-semibold
+                transition-transform duration-75 active:scale-[0.98]
+                active:bg-emerald-500/15 active:text-emerald-200
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/40
                 disabled:opacity-50
+                md:hover:bg-emerald-500/10
               "
               disabled={saving || !clip}
-              onClick={() => saveLabel("good")}
+              onClick={() => saveLabel('good')}
             >
-              ✅ Good
+              Good
             </button>
 
             <button
               className="
-                rounded-2xl border border-white/25 py-4 text-lg font-semibold
-                transition-transform duration-75 active:scale-[0.98] active:bg-white/5
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30
+                rounded-2xl border-2 border-red-500 text-red-300
+                bg-black py-4 text-lg font-semibold
+                transition-transform duration-75 active:scale-[0.98]
+                active:bg-red-500/15 active:text-red-200
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500/40
                 disabled:opacity-50
+                md:hover:bg-red-500/10
               "
               disabled={saving || !clip}
-              onClick={() => saveLabel("bad")}
+              onClick={() => saveLabel('bad')}
             >
-              ❌ Bad
+              Bad
             </button>
+
           </div>
 
           <div className="mt-2 flex items-center justify-between gap-2">
